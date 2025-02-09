@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+  }
+}
+
+@keyframes drawLineFromLeft {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 110%;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menuOpen {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .animated-line-from-left {
+    animation: drawLineFromLeft 2s ease-out forwards;
+  }
+
+  .line {
+    width: 0;
+    height: 1.5px; 
+    background-color: #6a7282; 
+    transition: width 0.5s ease-out;
+  }
+  
+  .button-wrapper:hover .line {
+    width: 100%;
+  }
+
+  .animate-slideIn {
+    animation: slideInFromRight 0.5s ease-out forwards;
+  }
+  
+  .animate-menuOpen {
+    animation: menuOpen 0.5s ease-out forwards;
+  }
+  
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+}
