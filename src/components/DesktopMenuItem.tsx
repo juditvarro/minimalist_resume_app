@@ -1,16 +1,29 @@
+import { forwardRef } from 'react';
+
 interface DesktopMenuItemProps {
   text: string;
 }
 
-const DesktopMenuItem = ({ text }: DesktopMenuItemProps) => {
-  return (
-    <div className="button-wrapper">
-      <a href={`#${text.toLowerCase()}`} className="text-gray-500 md:text-2xl">
-        {text}
-      </a>
-      <div className="line"></div>
-    </div>
-  );
-};
+const DesktopMenuItem = forwardRef<HTMLDivElement | null, DesktopMenuItemProps>(
+  ({ text }, ref) => {
+    const handleScroll = () => {
+      if (ref && 'current' in ref) {
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    return (
+      <div className='group relative'>
+        <button
+          className='text-gray-700 md:text-lg lg:text-xl xl:text-2xl'
+          onClick={() => handleScroll()}
+        >
+          {text}
+        </button>
+        <div className='absolute bottom-0 left-0 h-[1px] w-0 bg-gray-500 transition-all duration-300 ease-out group-hover:w-full'></div>
+      </div>
+    );
+  },
+);
 
 export default DesktopMenuItem;

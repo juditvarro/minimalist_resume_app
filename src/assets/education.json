@@ -1,0 +1,27 @@
+[
+  {
+    "school": "Széchenyi István University",
+    "subject": "Computer Engineering",
+    "city": "Budapest",
+    "period": "2022 -"
+  },
+  {
+    "school": "Green Fox Academy",
+    "subject": "Junior Software Developer",
+    "city": "Budapest",
+    "period": "2019"
+  },
+
+  {
+    "school": "Semmelweis University",
+    "subject": "Human Medicine",
+    "city": "Budapest",
+    "period": "2015-2018"
+  },
+  {
+    "school": "Österreichische Schule",
+    "subject": "Elementary and High School",
+    "city": "Budapest",
+    "period": "2003-2015"
+  }
+]

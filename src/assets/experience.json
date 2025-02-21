@@ -1,0 +1,55 @@
+[
+  {
+    "company": "BinX",
+    "city": "Budapest",
+    "period": "2023 April -",
+    "description": "Responsible for deploying and maintaining critical core banking systems, focusing on automation and scalability. Crafted custom Helm charts for seamless Kubernetes deployments and implemented Infrastructure as Code with Terragrunt and ArgoCD to automate environment provisioning. Designed a unified CI/CD pipeline with a quality gateway, improving delivery efficiency and code reliability. Additionally, established a comprehensive monitoring and alerting solution to proactively identify issues, ensuring high system availability.",
+    "skills": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Terraform",
+      "Terragrunt",
+      "Gitlab",
+      "AWS",
+      "Prometheus",
+      "Grafana"
+    ]
+  },
+  {
+    "company": "Finshape",
+    "city": "Budapest",
+    "period": "2022 October - 2023 April",
+    "description": "Developed CI/CD pipelines in Jenkins for Java microservices, automating the build, test, and deployment processes. Leveraged Helm to deploy microservices on OpenShift and provisioned AWS resources using Terraform. Additionally, automated repetitive deployment steps with AWS CodePipeline, streamlining workflows and increasing efficiency. Reduced AWS OpEx by 30%: introduced scheduled autoscaling and a tagging policy to optimize resource utilization and reduce operational costs.",
+    "skills": [
+      "OpenShift",
+      "AWS",
+      "Kubernetes",
+      "Terraform",
+      "Jenkins",
+      "Helm",
+      "Bitbucket"
+    ]
+  },
+  {
+    "company": "Accenture",
+    "city": "Budapest",
+    "period": "2021 May - 2022 October",
+    "description": "Managed cloud resource deployment using Infrastructure as Code (IaC), automated workflows with CI/CD pipelines, and handled database schema management. Proactively resolved security incidents, ensuring robust system protection. Additionally, supported and mentored new joiners during their onboarding, sharing her expertise to accelerate their integration into the team.",
+    "skills": [
+      "Kubernetes",
+      "Terraform",
+      "Jenkins",
+      "AWS",
+      "Azure DevOps",
+      "Helm"
+    ]
+  },
+  {
+    "company": "Sagemcom",
+    "city": "Budapest",
+    "period": "2019 June - 2021 May",
+    "description": "Deployed and maintained Java applications in a multi-cluster environment, ensuring high availability and performance. Configured Hadoop Big Data solutions and created deployment scripts using Ansible and Bash to automate processes. Additionally, troubleshot IT issues and implemented solutions directly at customer sites, optimizing system functionality and resolving technical challenges.",
+    "skills": ["Hadoop", "Ansible", "Bash"]
+  }
+]

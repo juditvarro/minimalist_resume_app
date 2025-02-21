@@ -1,20 +1,35 @@
-interface ExperienceProps {
-  section: string;
+import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import experienceData from '../assets/experience.json';
+import MobileExperience from './MobileExperience';
+import DesktopExperience from './DesktopExperience';
+import React, { forwardRef } from 'react';
+
+export interface ExperienceData {
+  company: string;
+  city: string;
+  period: string;
+  description: string;
+  skills: string[];
 }
 
-const Experience = ({ section }: ExperienceProps) => {
+const Experience = forwardRef<
+  HTMLDivElement | null,
+  React.HTMLProps<HTMLDivElement>
+>((props, ref) => {
+  const isVisible = useIntersectionObserver(ref);
+
   return (
     <div
-    id={`${section.toLowerCase()}`}
-    className="h-screen w-full bg-white flex flex-col items-start justify-center "
+      ref={ref}
+      className={`min-h-screen flex w-full flex-col items-start bg-white py-28 md:py-34 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
+      {...props}
     >
-      <div className="flex flex-col px-20">
-        <h1 className="text-6xl text-gray-500">Experience</h1>
-        <div className="animated-line-from-left my-3 h-[1.5px] bg-gray-400 -mx-4"></div>
-        <h2 className="text-2xl text-gray-500">my eexpreiencs</h2>
-      </div>
+      <h1 className='text-2xl md:text-3xl xl:text-4xl text-gray-500'>Experience</h1>
+
+      <MobileExperience experience={experienceData} />
+      <DesktopExperience experience={experienceData} />
     </div>
   );
-};
+});
 
 export default Experience;

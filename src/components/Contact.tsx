@@ -1,20 +1,29 @@
-interface ContactProps {
-  section: string;
-}
+import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import ContactButton from './ContactButton';
+import contacts from '../assets/contact.json';
+import { forwardRef } from 'react';
 
-const Contact = ({ section }: ContactProps) => {
+const Contact = forwardRef<
+  HTMLDivElement | null,
+  React.HTMLProps<HTMLDivElement>
+>((props, ref) => {
+  const isVisible = useIntersectionObserver(ref, 0.5);
+
   return (
     <div
-      id={`${section.toLowerCase()}`}
-      className="h-screen w-full bg-white flex flex-col items-start justify-center "
+      ref={ref}
+      className={`flex h-screen w-full items-center bg-white py-20 ${isVisible ? 'opacity-100' : 'opacity-0'} justify-evenly transition-opacity duration-1000`}
+      {...props}
     >
-      <div className="flex flex-col px-20">
-        <h1 className="text-6xl text-gray-500">Contacts</h1>
-        <div className="animated-line-from-left my-3 h-[1.5px] bg-gray-400 -mx-4"></div>
-        <h2 className="text-2xl text-gray-500">my contacts</h2>
-      </div>
+      {contacts.map((contact) => (
+        <ContactButton
+          key={contact.text}
+          text={contact.text}
+          url={contact.url}
+        />
+      ))}
     </div>
   );
-};
+});
 
 export default Contact;
