@@ -24,7 +24,7 @@ const Experience = forwardRef<
       className={`min-h-screen flex w-full flex-col items-start bg-white py-28 md:py-34 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
       {...props}
     >
-      <h1 className='text-2xl md:text-3xl xl:text-4xl text-gray-500'>Experience</h1>
+      <h1 className='text-2xl md:text-3xl xl:text-4xl text-primary'>Experience</h1>
 
       <MobileExperience experience={experienceData} />
       <DesktopExperience experience={experienceData} />

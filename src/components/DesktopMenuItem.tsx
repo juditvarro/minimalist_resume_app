@@ -15,7 +15,7 @@ const DesktopMenuItem = forwardRef<HTMLDivElement | null, DesktopMenuItemProps>(
     return (
       <div className='group relative'>
         <button
-          className='text-gray-700 md:text-lg lg:text-xl xl:text-2xl'
+          className='text-primary md:text-lg lg:text-xl xl:text-2xl'
           onClick={() => handleScroll()}
         >
           {text}

@@ -27,7 +27,7 @@ const MobileMenuItem = forwardRef<HTMLDivElement | null, MobileMenuItemProps>(
 
     return (
       <button
-        className={`transform text-xl text-gray-500 transition-opacity duration-1000 ease-out ${show ? 'opacity-100' : 'opacity-0'}`}
+        className={`transform text-xl text-primary transition-opacity duration-1000 ease-out ${show ? 'opacity-100' : 'opacity-0'}`}
         onClick={() => {
           handleScroll();
           onClick();
