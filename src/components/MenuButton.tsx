@@ -10,7 +10,7 @@ const MenuButton = forwardRef<HTMLButtonElement | null, MenuButtonProps>(
     return (
       <button
         ref={ref}
-        className='relative h-10 w-10 bg-white text-gray-500 focus:outline-none'
+        className='relative h-10 w-10 bg-white text-primary focus:outline-none'
         onClick={onClick}
       >
         <div className='absolute top-1/2 left-1/2 block w-5 -translate-x-1/2 -translate-y-1/2 transform'>

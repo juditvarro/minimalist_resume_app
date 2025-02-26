@@ -9,10 +9,10 @@ const MobileExperience = (props: MobileExperienceProps) => {
     <div className='block md:hidden'>
       {props.experience.map((experience) => (
         <div key={experience.company} className='my-10'>
-          <h2 className='text-xl text-gray-500'>{experience.company}</h2>
+          <h2 className='text-xl text-primary'>{experience.company}</h2>
           <div className='my-4 flex flex-col justify-between sm:flex-row'>
-            <h3 className='text-gray-500'>{experience.city}</h3>
-            <h3 className='text-gray-500'>{experience.period}</h3>
+            <h3 className='text-primary'>{experience.city}</h3>
+            <h3 className='text-primary'>{experience.period}</h3>
           </div>
           <p className='text-justify text-md leading-normal'>
             {experience.description}

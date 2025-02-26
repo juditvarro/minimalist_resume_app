@@ -15,12 +15,12 @@ const ContactButton = (props: ContactButtonProps) => {
   return (
     <div className='group relative'>
       <button
-        className='text-xl md:text-2xl xl:text-3xl text-gray-700'
+        className='text-xl md:text-2xl xl:text-3xl text-primary'
         onClick={() => handleClick(props.url)}
       >
         {props.text}
       </button>
-      <div className='absolute bottom-0 left-0 h-[1px] w-0 bg-gray-500 transition-all duration-300 ease-out group-hover:w-full'></div>
+      <div className='absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full'></div>
     </div>
   );
 };
